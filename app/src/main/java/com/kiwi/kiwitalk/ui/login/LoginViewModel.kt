@@ -17,7 +17,7 @@ class LoginViewModel @Inject constructor(
     val googleApiClient: GoogleSignInClient,
     private val userRepository: UserRepository
 ) : ViewModel() {
-    private val _loginState = MutableLiveData<Boolean>(false)
+    private val _loginState = MutableLiveData(false)
     val loginState: LiveData<Boolean> = _loginState
 
     fun signUp(id: String, name: String, imageUrl: String) {
